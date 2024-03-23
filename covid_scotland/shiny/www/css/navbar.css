@@ -1,0 +1,41 @@
+/* Importing free fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Press+Start+2P&display=swap');
+
+/*  Customise navBar body */
+.skin-blue .main-header .navbar {
+    background-color: #3F3685;
+    /*height: 300px;*/
+}
+
+/*  Customise navBar title */
+.skin-blue .main-header .logo {
+    background-color: #005EB8; 
+    font-size: 24px; 
+    color: black;
+    letter-spacing: 6px;
+    opacity: 15%;
+    /*height: 300px;
+    width: 400px;*/
+}
+
+/*  Customise navBar title */
+header.main-header{
+    background-color: #005EB8;
+    color: black;
+}
+
+/* When hover the title*/
+.skin-blue .main-header .logo:hover {
+    background-color: #005EB8;
+}
+
+/* Customise the sidebar toogle (icon to expand or collapse sidebar) */
+.skin-blue .main-header .navbar .sidebar-toggle {
+    color: white;
+}
+
+/* When hover the sidebar toogle icon to expand or collapse title */
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+    background-color: black;
+    color: white;
+}

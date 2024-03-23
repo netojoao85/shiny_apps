@@ -1,0 +1,45 @@
+
+
+/* SIDE BAR*/
+
+    /* --- SIDE BAR BODY--------------------------*/
+    .skin-blue .main-sidebar { 
+        background-color: black; 
+    }
+
+
+    /* CUSTOMISE SIDEBAR TABS */
+        /*-- Costumise tabs not selected--*/
+        .main-sidebar .sidebar .sidebar-menu a {
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            padding-top: 30px; 
+            padding-bottom: 30px;
+        }
+
+        /* When hover a tab */
+        .main-sidebar .sidebar .sidebar-menu a:hover {
+            color: var(--yellow);
+            background-color: black;
+            border-left-width: 0px;
+           /* border-left-color: #82BB25;
+            border-left-width: 10px;
+            opacity: 0.8;*/
+        }
+
+        /* Customise the tab selected */
+        .main-sidebar .sidebar .sidebar-menu .active a {
+            background-color: black;
+            color: var(--yellow);
+            border-left-color: var(--yellow);
+            border-left-width: 6px;
+            font-size: 20px;
+            font-weight: normal;
+            vertical-align: middle;
+            text-align: left; box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 5px; 
+        }
+
+
+
+

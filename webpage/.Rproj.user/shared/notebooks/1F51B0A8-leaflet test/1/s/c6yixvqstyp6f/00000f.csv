@@ -1,0 +1,39 @@
+"0","library(tidyverse)"
+"0","library(tsibble)"
+"2","Warning: package ‘tsibble’ was built under R version 4.2.3"
+"2","
+Attaching package: ‘tsibble’
+
+"
+"2","The following object is masked from ‘package:lubridate’:
+
+    interval
+
+"
+"2","The following objects are masked from ‘package:base’:
+
+    intersect, setdiff, union
+
+"
+"0","library(tsibbledata)"
+"2","Warning: package ‘tsibbledata’ was built under R version 4.2.3"
+"0","library(feasts)"
+"2","Warning: package ‘feasts’ was built under R version 4.2.1"
+"2","Loading required package: fabletools
+"
+"2","Warning: package ‘fabletools’ was built under R version 4.2.1"
+"0","library(lubridate)"
+"0","library(leaflet)"
+"2","Warning: package ‘leaflet’ was built under R version 4.2.1"
+"0","nyc_bikes_df <- nyc_bikes"
+"0",""
+"0","nyc_bikes_df <- nyc_bikes_df %>% "
+"0","  mutate(month          = month(start_time, "
+"0","                                label = TRUE),"
+"0","         week_day       = wday(start_time, "
+"0","                               label = TRUE)) %>% "
+"0","  mutate(station_travel = str_c(start_station, "
+"0","                                end_station, "
+"0","                                sep = "" - ""), "
+"0","         .after = ""end_station"")"
+"0",""

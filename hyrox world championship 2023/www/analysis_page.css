@@ -1,0 +1,105 @@
+
+
+/* --  TITLE WITH THE ATHLETE'S NAME --*/
+#athlete_name {
+    color: var(--yellow); 
+    padding: 0px; 
+    margin: 0px
+}
+
+
+/* -- INFOBOX -- */
+.info-box {
+    box-shadow: rgba(0, 0, 0, 0.90) 0px 4px 8px; 
+    margin: 20px 0px 20px 0px; 
+    padding: 0px;
+}
+
+.info-box-icon {
+    font-size: 50px; 
+    text-align: center;
+}
+
+.info-box-text {
+    font-size: 24px;
+    color: white;
+    padding-top: 7px;
+    margin: 0px;
+    text-transform: capitalize}
+
+.info-box-result {
+    font-size: 16px;
+    padding-top: 15px;
+    margin: 0px;
+}
+
+
+
+/* -- STATISTIC RACE TIMES --*/
+    /* The values in front of the mean & median switchs on the sidebar*/
+    #station_mean_value { 
+        color: #00A65A; 
+        font-weight: normal; 
+        font-size: 18px; 
+        margin: 0px; 
+        padding: 0px; 
+    }
+
+    #station_median_value { 
+        color: #DD4B39; 
+        font-weight: normal; 
+        font-size: 18px; 
+        margin: 0px; 
+        padding: 0px; 
+    }
+
+
+/* -- TABLE WITH THE ATHLETE PERFORMACE BY STATION --*/
+    /* customise the footer*/
+    #analysis_main_page table.dataTable.no-footer {
+        border-bottom: 0px;
+    }
+
+    /* Customise the header */
+    #analysis_main_page th {
+        background-color: black;
+        text-align: center;
+        height: 0px;
+        padding: 10px 0px;
+    }
+
+    /* Customise the borders to become rounded*/
+    #analysis_main_page th:nth-child(1) {
+        border-top-left-radius: 60px; 
+        border-bottom-left-radius: 60px;
+    }
+    #analysis_main_page th:nth-last-child(1) {
+        border-top-right-radius: 60px; 
+        border-bottom-right-radius: 60px;
+    }
+
+    #analysis_main_page tr td:nth-child(1) {
+        border-top-left-radius: 60px; 
+        border-bottom-left-radius: 60px; 
+    }
+
+    #analysis_main_page tr td:nth-child(5) {
+        border-radius: 50%; 
+    }
+
+    #analysis_main_page tr td:nth-child(4) {
+        border-top-right-radius: 60px; 
+        border-bottom-right-radius: 60px;
+    }
+
+
+    
+/* --  --*/
+
+
+
+/* --  --*/
+
+
+
+/* --  --*/

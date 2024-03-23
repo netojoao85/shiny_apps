@@ -1,0 +1,12 @@
+"0","```r
+# Load in the region geometry
+nhs_borders <- st_read(dsn = \"../01_data/geospatial_data/SG_NHS_HealthBoards_2019/\", 
+                       layer = \"SG_NHS_HealthBoards_2019\") %>% 
+  st_simplify(dTolerance = 2500) %>% 
+  st_transform('+proj=longlat +datum=WGS84')
+
+# 
+# st_write(nhs_borders,
+#          dsn = here::here(\"02_cleaned_data/nhs_region_simple\"),
+#          driver = \"ESRI Shapefile\")
+```"

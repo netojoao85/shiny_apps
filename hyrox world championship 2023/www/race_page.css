@@ -1,0 +1,76 @@
+
+/* -- Title/Label on the Top of each table -- */
+.race_table_title{
+    background-color: var(--yellow);
+    color: #202020;
+    margin: 0px;
+    padding: 10px 0px 10px 20px;
+    width: 100%;
+}
+
+
+/* -- TABLES --*/
+
+/* Customise Header of all tables*/
+#race_page th {
+    background-color: #202020;
+    border: none;
+    text-align: center;
+    height: 0px;
+    padding: 3px 0px;
+    color: white;
+    border-bottom: 3px solid #FFFFFE;
+    font-size: 16px
+   }
+
+    /* -- TABLE RESULTS & RAKINGS -- */
+        /* 'AG' and the '8k Run Perfomance' label*/   
+        #table_classification th:nth-child(6) {
+            background-color: #202020;
+            color: white; 
+            }
+
+        /* 'Rank' label*/    
+        #table_classification th:nth-child(7) {
+            background-color: #202020; 
+            color: white; 
+        }
+
+        /* text color of the main content of the table*/
+        #table_classification td {
+            color: white; 
+            padding: 0px 1px 0px 5px; 
+            border-bottom: 0.3px solid white; 
+            font-size: 18px;
+        }
+
+
+
+
+/* -- TABLES FASTER ATHLETE & TABLE STATISTICS -- */
+#race_page table.dataTable.no-footer {
+    border-bottom: 3px solid #FFFFFE;
+}
+
+.paginate_button {
+    background: #FFFFFE; 
+    font-size: 12px
+   }
+
+    /*Faster Athlete: Footer table*/
+    #DataTables_Table_1_paginate {
+        background-color: #202020;
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        text-align: center;
+    }
+
+
+    /* Statistics table: Footer table*/
+    #DataTables_Table_0_paginate {
+        background-color: #202020;
+        width: 100%;
+        padding: 5px 0px 5px 0px;
+        text-align: center;                  
+    }
+

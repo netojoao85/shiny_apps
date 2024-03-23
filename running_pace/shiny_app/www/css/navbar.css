@@ -1,0 +1,103 @@
+/* Importing free fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Press+Start+2P&display=swap');
+
+
+/*--- NAVBAR BODY  ---*/
+  /* Customise navbar body */
+  .navbar-default {
+      color: var(--grey_write);
+      background-color: var(--navbar);
+      border-radius: 0px;
+      max-height: 100%;
+      /*overflow-y: scroll;*/
+  }
+
+  /* Customise navbar title */
+  .navbar-default .navbar-brand, .navbar-default:hover .navbar-brand:hover, .navbar-brand {
+    color: var(--grey_write);
+    background-color: var(--navbar);
+    padding-right: 100px;
+  }
+  
+
+/*--- NAVBAR TABS  ---*/
+  /* Customise navbar tabs not selected*/
+  .navbar-default .navbar-nav > li > a {
+    color: var(--grey_write);
+    border-radius: 0px;
+    font-weight: normal;
+  }
+
+  /* Customise navbar tabs selected*/
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: black;
+    background-color: var(--green);
+    font-weight: bold;
+  }
+  
+   /* When hover a tab*/
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: black;
+    background-color: var(--green);
+  }
+  
+  /* hover toggle icon to expand and collapse */
+  .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+      background-color: #12192F;
+      border-color: var(--green);
+  }
+  
+  /* Customise toggle icon released*/
+  .navbar-default .navbar-toggle .icon-bar {
+      background-color: var(--grey_write);
+  }
+  
+  /* Customise toggle icon pressed*/
+  .navbar-default .navbar-toggle:focus .icon-bar {
+      background-color: var(--green);
+  }
+  
+  
+  /*
+    Increase width at which navbar collapses for better viewing on mobile landscape
+    Change max-width argument to a different number of pixels to change the float breakpoint
+    https://stackoverflow.com/questions/27092929/where-to-edit-bootstrap-grid-float-breakpoint
+  */
+  @media (max-width: 900px) {
+      .navbar-header {
+          float: none;
+      }
+      .navbar-toggle {
+          display: block;
+      }
+      .navbar-collapse {
+          border-top: 1px solid transparent;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      }
+      .navbar-collapse.collapse {
+          display: none!important;
+      }
+      .navbar-nav {
+          float: none!important;
+          margin: 7.5px -15px;
+      }
+      .navbar-nav>li {
+          float: none;
+      }
+      .navbar-nav>li>a {
+          padding-top: 10px;
+          padding-bottom: 10px;
+      }
+      .navbar-text {
+          float: none;
+          margin: 15px 0;
+      }
+      /* since 3.1.0 */
+      .navbar-collapse.collapse.in {
+          display: block!important;
+      }
+      .collapsing {
+          overflow: hidden!important;
+      }
+  }
+

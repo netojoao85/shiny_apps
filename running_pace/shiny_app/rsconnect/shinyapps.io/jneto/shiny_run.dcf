@@ -1,0 +1,12 @@
+name: shiny_run
+title: shiny_run
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11394253
+bundleId: 8344450
+url: https://jneto.shinyapps.io/shiny_run/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

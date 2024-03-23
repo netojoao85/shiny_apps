@@ -1,0 +1,26 @@
+{
+    "id": "0E095C07",
+    "path": "C:/Users/jpard/Downloads/Shiny Apps Reference/covid-19_respiratory_surveillance_dashboard-new_structure_cm/covid-19_respiratory_surveillance_dashboard-new_structure_cm/shiny_app/modules/jump_to_tab_button/jump_to_tab_button_server.R",
+    "project_path": null,
+    "type": "r_source",
+    "hash": "2173727850",
+    "contents": "",
+    "dirty": false,
+    "created": 1711196859531.0,
+    "source_on_save": false,
+    "relative_order": 7,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "16,1",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1709475364,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1709475364,
+    "read_only": false,
+    "read_only_alternatives": []
+}

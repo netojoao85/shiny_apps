@@ -1,0 +1,27 @@
+{
+    "id": "9C24AE6D",
+    "path": "C:/Users/jpard/OneDrive/Documentos/CodeClan/shiny_apps/running_pace/shiny_app/setup.R",
+    "project_path": "shiny_app/setup.R",
+    "type": "r_source",
+    "hash": "2864018793",
+    "contents": "",
+    "dirty": false,
+    "created": 1709552795847.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "17,0",
+        "scrollLine": "0",
+        "docOutlineVisible": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1709597279,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1709597279613,
+    "read_only": false,
+    "read_only_alternatives": []
+}

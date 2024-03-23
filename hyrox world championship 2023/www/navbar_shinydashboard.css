@@ -1,0 +1,65 @@
+
+/*-- NAVBAR --*/
+
+    /*  Customise navBar body */
+    .skin-blue .main-header .navbar {
+        background-color: black;
+        /*height: 300px;*/
+    }
+
+
+    /* Customise navbar text*/
+        /* change color of navbar text*/
+        .skin-blue .main-header .navbar .navbar-nav > li > a {
+            color: white; /* Change this color to your desired text color */
+        }
+        
+        /* Change color of navbar text on hover */
+        .skin-blue .main-header .navbar .navbar-nav > li > a:hover {
+            color: white; /* Change this color to your desired text color on hover */
+        }
+    
+    /* Customise navbar icos*/
+        /*hove navbar icons*/
+        .navbar-custom-menu .navbar-nav li:hover{background-color: #A69000}
+    
+        /*navbar icons selected/pressed*/
+        li.dropdown.notifications-menu.open {background-color: #FFED00; color: black}
+
+
+    /* Navbar title*/
+        /*  Customise navBar title */
+        .skin-blue .main-header .logo {
+            background-color: black; 
+            font-size: 24px; 
+            color: white;
+            letter-spacing: 6px;
+            opacity: 15%;
+            /*height: 300px;
+            width: 400px;*/
+        }
+
+        /*  Customise navBar title */
+        header.main-header{
+            background-color: black;
+            color: white;
+        }
+
+        /* When hover the title*/
+        .skin-blue .main-header .logo:hover {
+            background-color: black;
+        }
+
+
+    /* -- Navbar toogle button-- */
+        /* Customise the sidebar toogle (icon to expand or collapse sidebar) */
+        .skin-blue .main-header .navbar .sidebar-toggle {
+            color: white;
+        }
+
+        /* When hover the sidebar toogle icon to expand or collapse title */
+        .skin-blue .main-header .navbar .sidebar-toggle:hover {
+            background-color: yellow;
+            color: black;
+        }
+

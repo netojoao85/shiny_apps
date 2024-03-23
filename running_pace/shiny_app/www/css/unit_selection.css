@@ -1,0 +1,70 @@
+/* .CSS customise file for the RadioGroupButton Widget */
+
+
+/* The box/panel around the tabs */
+.well {
+    background-color: grey;
+    border: 0 solid var(--green);
+    padding: 0px;
+    box-shadow: none;
+    margin-top: 20px;
+  }
+
+
+/* Tab not selected */
+.radiobtn{background-color:var(--navbar);
+    color: white;
+    border: 1px solid var(--white);
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+/* Tab clicked to select */
+.btn-default.active, .btn-default:active, .open>.dropdown-toggle.btn-default {
+    color: var(--navbar) !Important ;
+    background-color: var(--green) !Important ;
+    border-color: grey !Important ;
+    font-weight:bold;
+    outline: 0px !Important;
+}
+
+/* Tab selected */
+.btn-default.active.focus, .btn-default:active:focus, .open>.dropdown-toggle.btn-default {
+    color: var(--navbar) !Important ;
+    background-color: var(--green) !Important ;
+    border-color: grey !Important ;
+    font-weight:bold;
+    outline: 0px !Important;
+}
+
+/* HELP */
+/* OK - Tab not selected */
+
+/*.radiobtn{
+    background-color: #404040;
+    color: white;
+    border: 2px solid var(--navy);
+    font-size: 20px;
+    font-weight: bold;
+}*/
+
+/* OK - hover the tab not selected */
+/*.radiobtn:hover{
+    color:black;
+    background-color: blueviolet;
+    border: 2px solid var(--phs-liberty);
+}*/
+
+/* OK - Tab selected */
+/*.btn-default.active.focus, .btn-default:active:focus, .open>.dropdown-toggle.btn-default {
+    color: white;
+    background-color: #00CCB4;
+    border-color: white;
+    font-weight:bold;
+    outline: 0px;
+}*/
+
+
+
+/* SIDE BAR SELECTORS */
+

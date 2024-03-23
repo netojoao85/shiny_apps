@@ -1,0 +1,45 @@
+/* Importing free fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&family=Press+Start+2P&display=swap');
+
+
+/* CUSTOMISE SIDEBAR BODY */
+/*----------------------------------------------------------*/
+.skin-blue .main-sidebar { 
+    background-color: #005EB8; 
+}
+
+
+/* CUSTOMISE SIDEBAR TABS */
+/*-- Costumise tabs not selected--*/
+.main-sidebar .sidebar .sidebar-menu a {
+    background-color: #C027B9;
+    color: white;
+    font-size: 18px;
+    padding-top: 30px; 
+    padding-bottom: 30px;
+}
+
+/* When hover a tab */
+.main-sidebar .sidebar .sidebar-menu a:hover {
+    color: white;
+    background-color: #C027B9;
+    border-left-color: #82BB25;
+    border-left-width: 10px;
+    opacity: 0.8;
+}
+
+/* Customise the tab selected */
+.main-sidebar .sidebar .sidebar-menu .active a {
+    background-color: #C027B9;
+    color: white;
+    border-left-color: #C027B9;
+    border-left-width: 10px;
+    font-size: 20px;
+    font-weight: normal;
+    vertical-align: middle;
+    text-align: left; box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 5px; 
+}
+
+
+
+
