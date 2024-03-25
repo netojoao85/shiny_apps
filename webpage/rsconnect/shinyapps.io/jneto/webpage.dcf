@@ -1,0 +1,12 @@
+name: webpage
+title: webpage
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11576192
+bundleId: 8412078
+url: https://jneto.shinyapps.io/webpage/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

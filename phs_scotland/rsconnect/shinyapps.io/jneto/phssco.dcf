@@ -1,0 +1,12 @@
+name: phssco
+title: phssco
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11577288
+bundleId: 8412612
+url: https://jneto.shinyapps.io/phssco/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

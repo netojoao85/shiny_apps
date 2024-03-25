@@ -1,4 +1,0 @@
-"0","```r
-beds <- read_csv(here::here(\"02_cleaned_data/bed_clean.csv\")) %>% 
-  mutate(year_quarter = yearquarter(year_quarter))
-```"
