@@ -1,0 +1,12 @@
+name: my_running
+title: my_running
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11242458
+bundleId: 8261287
+url: https://jneto.shinyapps.io/my_running/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
