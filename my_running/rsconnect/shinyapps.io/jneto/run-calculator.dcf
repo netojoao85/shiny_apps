@@ -1,0 +1,12 @@
+name: run-calculator
+title: run-calculator
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12997449
+bundleId: 9244485
+url: https://jneto.shinyapps.io/run-calculator/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

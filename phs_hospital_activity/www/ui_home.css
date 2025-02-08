@@ -1,0 +1,109 @@
+
+/* -- Customise Button -- */
+.btn {
+    white-space: normal;
+    text-align: left;
+    background-color: #D9D9D9;
+    color: black;
+    margin:10px 20px;
+    padding: 25px 10px;
+    font-weight: normal;
+    font-size: 30px;
+    cursor: pointer;
+    width: 600px;
+    border-radius: 0px;
+}
+
+#about.btn.btn-default {
+    border-left: 9px solid var(--phs-purple);
+}
+
+#length.btn.btn-default {
+    border-left: 9px solid var(--phs-green);
+}
+
+#beds.btn.btn-default {
+    border-left: 9px solid var(--phs-blue);
+}
+
+#covid.btn.btn-default {
+    border-left: 9px solid var(--phs-pink);
+}
+
+/*---------------------------------------------------------*/
+
+#about.btn.btn-default:hover{
+    font-size: 32px;
+    border-left: 11px solid var(--phs-purple);
+    box-shadow: 5px 3px 4px rgba(66, 53, 132, 0.5);
+    color: var(--phs-purple);
+}
+
+#length.btn.btn-default:hover{
+    font-size: 32px;
+    border-left: 11px solid var(--phs-green);
+    box-shadow: 5px 3px 4px rgba(129, 186, 36, 0.5);
+    color: var(--phs-green);
+}
+
+#beds.btn.btn-default:hover{
+    font-size: 32px;
+    border-left: 11px solid var(--phs-blue);
+    box-shadow: 5px 3px 4px rgba(29, 153, 214, 0.5);
+    color: var(--phs-blue);
+}
+
+#covid.btn.btn-default:hover{
+    font-size: 32px;
+    border-left: 11px solid var(--phs-pink);
+    box-shadow: 5px 3px 4px rgba(155, 67, 147, 0.5);
+    color: var(--phs-pink); 
+}
+
+
+/*---------------------------------------------------------*/
+
+.btn-default .hover-text {
+    display: none;
+    font-size: 16px;
+    color: black;
+    font-weight:normal;
+}
+
+.btn-default:hover .hover-text {
+    display: flex;
+}
+
+/*---------------------------------------------------------*/
+
+#about.btn-default:hover:focus:active {
+    color: #fff;
+    background-color: var(--phs-purple);
+    border-color: var(--phs-purple);
+    outline: 0px;
+}
+
+#length.btn-default:hover:focus:active {
+    color: #fff;
+    background-color: var(--phs-green);
+    border-color: var(--phs-green);
+    outline: 0px;
+}
+
+#beds.btn-default:hover:focus:active {
+    color: #fff;
+    background-color: var(--phs-blue);
+    border-color: var(--phs-blue);
+    outline: 0px;
+}
+
+#covid.btn-default:hover:focus:active {
+    color: #fff;
+    background-color: var(--phs-pink);
+    border-color: var(--phs-pink);
+    outline: 0px;
+}
+
+
+
+

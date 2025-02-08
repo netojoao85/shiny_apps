@@ -1,124 +1,97 @@
-library(tidyverse)
-library(janitor)
-library(DT)
-library(tidyverse)
-library(leaflet)
-library(sf)
-library(rnaturalearth)
-library(rnaturalearthhires)
-library(leaflet.extras)
-library(bsicons)
 
-apart <- read_csv("~/../Downloads/Empreendimentos_Turisticos_Existentes.csv") %>% 
-  clean_names()
-
-apart <- apart %>% 
-  select(distrito, denominacao)
-
-apart <- apart %>% 
-  mutate(name = distrito) %>% 
-  select(-distrito)
-
-districts_mapping <- data.frame(id = 1:nrow(Portugal_continental),
-                                name = Portugal_continental$name)
+source(here::here("scripts/clean_data.R"), local = TRUE)$value
 
 
-library(shiny)
-
-# Define UI for application that draws a histogram
 ui <- fluidPage(
   
-  # pt <- source("map.R", local = TRUE)$value,
-  # 
+  shinyjs::useShinyjs(),
   
-  leafletOutput("map"),
-  dataTableOutput("table_out")
+  source(here::here("scripts/css_scripts.R"), local = TRUE)$value, 
   
-  
+  fluidRow(
+    style = "margin-left: -15px;",
+    
+    
+    # Menu Sidebar
+    column(width = 3,
+           class = "col-menu", 
+           
+           div(class = "offset"),
+        
+           div(class = "menu",
+               source(here::here("scripts/filter_menu/ui/ui_filter_menu.R"), local = TRUE)$value
+           )
+    ),
+    
+    # Dashboard side
+    column(
+      width = 9,
+      
+      navbarPage(
+        id = "navbar",
+        title = "",
+        collapsible = TRUE,
+        
+        header = tags$head(
+          source(here::here("scripts/header/ui/ui_header.R"), local = TRUE)$value
+        ),
+        
+        
+        # UI Analysis Tab ------------------------------------------------------------
+        
+        tabPanel(title = span(icon("eye"), "ANALYSIS"),
+          source(here::here("scripts/info/ui/ui_info_analysis.R"), local = TRUE)$value,
+          source(here::here("scripts/tab_analysis/ui/ui_tab_analysis.R"), local = TRUE)$value
+        ),
+        
+        # UI Trend Tab ---------------------------------------------------------------
+        
+        tabPanel(
+          title = span(bs_icon("graph-up"), "TREND"),
+          source(here::here("scripts/info/ui/ui_info_trend.R"), local = TRUE)$value,
+          source(here::here("scripts/tab_trend/ui/ui_tab_trend.R"), local = TRUE)$value
+        ),
+        
+        # UI Data Tab ----------------------------------------------------------------
+        
+        tabPanel(
+          title = span(bs_icon("database-fill-check"), "DATA"),
+          source(here::here("scripts/info/ui/ui_info_data.R"), local = TRUE)$value,
+          source(here::here("scripts/tab_data/ui/ui_tab_data.R"), local = TRUE)$value
+          
+        )
+      )
+    )
+  )
 )
 
-# Define server logic required to draw a histogram
-server <- function(input, output) {
+
+server <- function(session, input, output) {
   
-  # Reactive variable to store clicked district name
-  clicked_district <- reactiveVal()
-  
-  
+  map_section <- reactiveValues(current_selection = "portugal")
+  selected_region <- reactiveVal()
   
   
+  # SERVER Header -----------------------------------------------------------
+  source(here::here("scripts/header/server/server_header.R"), local = TRUE)$value
   
+  # SERVER Info -------------------------------------------------------------
+  source(here::here("scripts/info/server/server_info.R"), local = TRUE)$value
   
+  # SERVER Filter Menu -------------------------------------------------------
+  source(here::here("scripts/filter_menu/server/selection_map.R"), local = TRUE)$value
+  source(here::here("scripts/filter_menu/server/filter_menu_conditions.R"), local = TRUE)$value
   
+  # SERVER Analysis tab -----------------------------------------------------
+  source(here::here("scripts/tab_analysis/server/server_tab_analysis.R"), local = TRUE)$value
   
-  output$map <- renderLeaflet({
-    
-    Portugal <- ne_states(
-      country = "Portugal",
-      returnclass = "sf"
-    ) 
-    
-    
-    Portugal_continental <- Portugal %>% 
-      filter(!name %in% c("Madeira", "Azores"))
-    
-    bbox <- st_bbox(Portugal_continental)
-    
-    leaflet() %>% 
-      addTiles() %>% 
-      addPolygons(data = Portugal_continental,
-                  color = "black",
-                  fillColor = "darkgreen",
-                  weight = 1,
-                  opacity = 1,
-                  fillOpacity = 1,
-                  highlightOptions = highlightOptions(
-                    fillColor = "firebrick", 
-                    weight = 2, 
-                    bringToFront = TRUE),
-                  # label = Portugal_continental$name,
-                  # popup = paste0(Portugal_continental$name, "<br>", bsicons::bs_icon("pin")),
-                  labelOptions = labelOptions(clickable = TRUE, 
-                                              permanent = TRUE, 
-                                              noHide = TRUE, 
-                                              textOnly = FALSE,
-                                              style = list("font-size" = "14px", "background-color" = "lightgrey", "text-align" = "center"))) %>%
-      setMaxBounds(lng1 = bbox["xmin"], lng2 = bbox["xmax"], lat1 = bbox["ymin"], lat2 = bbox["ymax"]) %>% 
-      leaflet.extras::setMapWidgetStyle(style = list(background = "transparent"))
-    
-    
-  })
+  # SERVER Trend tab --------------------------------------------------------
+  source(here::here("scripts/tab_trend/server/server_tab_trend_plot.R"), local = TRUE)$value
   
-  
-  # observeEvent(input$map_shape_click, {
-  #   click <- input$map_shape_click
-  #   if (!is.null(click$id)) {
-  #     selected_district <- districts_mapping$name[click$id]
-  #     clicked_district(selected_district)
-  #   }
-  # })
-  
-  observeEvent(input$map_shape_click, {
-    print("Clicked shape event:")
-    print(input$map_shape_click)
-  })
-  
-  # Define reactive expression for filtered data
-  filtered_apart <- reactive({
-    selected_district <- clicked_district()
-    if (!is.null(selected_district)) {
-      filter(apart, name == selected_district)
-    } else {
-      apart
-    }
-  })
-  
-  # Render DataTable
-  output$table_out <- renderDataTable({
-    filtered_apart()
-  })
+  # SERVER Data tab ----------------------------------------------------------
+  source(here::here("scripts/tab_data/server/server_tab_data_DTtable.R"), local = TRUE)$value
   
 }
-
 
 # Run the application 
 shinyApp(ui = ui, server = server)

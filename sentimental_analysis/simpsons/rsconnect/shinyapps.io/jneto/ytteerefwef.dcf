@@ -1,0 +1,12 @@
+name: ytteerefwef
+title: simpsons
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 11995916
+bundleId: 8611806
+url: https://jneto.shinyapps.io/ytteerefwef/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

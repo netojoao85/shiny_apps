@@ -1,0 +1,37 @@
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------------------------- */
+
+.about_me hr {
+  margin: 0px; 
+  padding: 0px;
+  margin-bottom: 5px;
+}
+
+.about_me h2{
+  color:firebrick
+}
+
+.about_me_expand {
+  background-color: #EFEFEF;
+  padding: 10px;
+}
+
+
+
+
+
+summary::before {
+  content: '►'; 
+  margin-right: 0.5px; 
+}
+details[open] summary::before {
+  content: '▼'; 
+}
+
+

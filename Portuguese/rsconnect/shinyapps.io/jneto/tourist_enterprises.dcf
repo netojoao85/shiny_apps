@@ -1,0 +1,12 @@
+name: tourist_enterprises
+title: tourist_enterprises
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12113496
+bundleId: 8691895
+url: https://jneto.shinyapps.io/tourist_enterprises/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

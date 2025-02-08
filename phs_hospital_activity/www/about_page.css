@@ -1,0 +1,10 @@
+summary::before {
+    content: '►'; 
+    margin-right: 0.5px; 
+  }
+
+details[open] summary::before {
+    content: '▼'; 
+}
+  
+  

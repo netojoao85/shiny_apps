@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------*/
+/* Pop-up Window (Modaldialog) --------------------------------*/
+/* ------------------------------------------------------------*/
+.modal-header, .modal-footer, .modal-body, .popup_window .container-fluid{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+  }
+  
+  .modal-footer{
+    background-color: var(--lightpurple);
+    display: flex;
+    justify-content: center;
+  }
+  
+  button#close_popup {
+    width: 35%;
+    background-color: var(--red);
+    color: white;
+    border-color: var(--red);
+    border-radius: 20px;
+    margin-bottom: 10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25)
+  }
+  
+  button#close_popup:hover {
+    background-color: #531b1b;
+  }
+  

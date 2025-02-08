@@ -1,0 +1,10 @@
+/* -------------------------------------------------------------
+Table header 
+-> It is the table header of the table from Data tab
+----------------------------------------------------------------*/
+#table_summary th {
+    text-align: center;
+    background-color: var(--lightgrey);
+    color: black;
+    border-bottom: 0px;
+}

@@ -1,0 +1,75 @@
+
+.content_section {
+  background: transparent;
+  height: 450px;
+  width: 86%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.option1.btn-default, .option2.btn-default, .option3.btn-default {
+  background: white;
+  height: 100px;
+  font-size: 20px;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0 , 0.3);
+  border: 1px solid lightgrey;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.option1 i, .option2 i, .option3 i {
+    font-size: 40px;
+    padding-right: 10px;
+}
+
+i.fa-solid.fa-chevron-right {
+    color: black;
+    font-size: 25px;
+    text-align: right;
+}
+
+
+
+
+.option1.btn-default {
+  margin-top: 25px;
+  color: var(--option1);
+  border-left: 7px solid var(--option1);
+}
+
+.option2.btn-default{
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  color: var(--option2);
+  border-left: 7px solid var(--option2);
+}
+
+.option3.btn-default{
+  margin-bottom: 30px;
+  color: var(--option3);
+  border-left: 7px solid var(--option3);
+}
+
+.option1.btn-default:hover {
+    color: var(--option1_dark);
+    border-left: 8px solid var(--option1_dark);
+  }
+  
+  .option2.btn-default:hover{
+    color: var(--option2_dark);
+    border-left: 8px solid var(--option2_dark);
+  }
+  
+  .option3.btn-default:hover{
+    color: var(--option3_dark);
+    border-left: 8px solid var(--option3_dark);
+  }
+
+

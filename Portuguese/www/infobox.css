@@ -1,0 +1,21 @@
+.my_infobox {
+    width: 33%;
+    float: left;
+    margin: 10px 0px 0px 0px; 
+    background-color: none;
+    color: var(--slider-color);
+    font-weight: bold; 
+    padding: 0px; 
+    /*text-align: center;*/
+    display: block;
+    color: var(--blue)
+  }
+  
+  @media (max-width: 900px) {
+    .my_infobox {
+      width: 95%; 
+      display: block;
+      align-items: center;
+      justify-content: center;
+    } 
+  }

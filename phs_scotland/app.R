@@ -65,10 +65,6 @@ body <- dashboardBody(
 # ui - Define the ui ------------------------------------------------------
 
 ui <- dashboardPage(
-  
- 
-  
-  
   header  = header, 
   sidebar = sidebar, 
   body    = body

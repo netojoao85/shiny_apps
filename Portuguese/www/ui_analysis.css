@@ -1,0 +1,86 @@
+
+.offset{
+    height:50px; 
+    background-color: #010507; 
+    margin:0px -15px; 
+}
+
+/* --------------------------------------------
+Filter Menu section
+--------------------------------------------  */
+.menu {
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    /*background-color: var(--menu);
+    background: radial-gradient(circle at top left, #FBFBFB, #EFEFEF);*/
+    background: radial-gradient(circle at top left, #EFEFEF, #E7E5E5, #D1CDCD);
+    height: max-content;
+}
+
+.menu h4 {
+    color: black; 
+    text-align:center; 
+    margin: 0px;
+    padding-top: 20px;
+}
+
+/* --------------------------------------------
+The label above the plots
+--------------------------------------------  */
+.analysis_section {
+    display:flex; 
+    margin: 20px 0px 10px 0px;
+    background: radial-gradient(circle at top left, #EFEFEF, #E7E5E5, #D1CDCD);
+    color: var(--blue); 
+    padding: 10px 15px; 
+    border-radius: 15px;
+}
+
+.analysis_section h3 {
+    margin:0px; 
+    padding:0px
+}
+
+
+/* --------------------------------------------
+Radiobuttons to select which plot will be showed
+--------------------------------------------  */
+#in_volume {
+    margin: 0px;
+    padding: 0px;
+}
+
+label#in_volume-label {
+    margin: 0px;
+    padding: 0px;
+    display: none;
+}
+
+
+
+/* --------------------------------------------
+Adjust screen when becomes smaller
+--------------------------------------------  */
+@media (max-width: 900px) {
+    .offset {
+        height:0px; 
+    } 
+  }
+
+@media (max-width: 900px) {
+    .col-menu {
+        padding-left: 0px;
+        padding-right: 0px;
+    } 
+  }
+
+  @media (max-width: 900px) {
+    .menu {
+        margin: 0px;
+        border-radius: 0px;
+    } 
+  }
+
+
+

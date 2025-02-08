@@ -1,0 +1,35 @@
+
+.offset{
+    height:50px; 
+    background-color: #010507; 
+    margin:0px -15px; 
+}
+
+.menu {
+    border-radius: 10px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.4);
+    /*background-color: #FBFBFB;
+    background-color: #73B6E6;*/
+    background: radial-gradient(circle at top left, #FBFBFB, #73B6E6);
+    height: max-content;
+}
+
+.menu h4 {
+    color: black; 
+    text-align:center; 
+    margin: 30px 0px 0px 0px;
+    padding-top: 20px;
+}
+
+.analysis_section {
+    display:flex; 
+    margin: 20px 0px 10px 0px;
+    background: radial-gradient(circle at top left, #EFEFEF, #E7E5E5, #D1CDCD);
+    color: #006D9E; padding: 10px 15px; 
+    border-radius: 15px;
+}
+
+.analysis_section h3 {
+    margin:0px; 
+    padding:0px
+}

@@ -1,0 +1,13 @@
+name: phs_activity
+title: phs_activity
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12053314
+bundleId: 8649175
+url: https://jneto.shinyapps.io/phs_activity/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: app_scripts/css_scripts.R

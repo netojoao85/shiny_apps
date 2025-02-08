@@ -1,0 +1,75 @@
+/* All elements that are presented in the sidebar and works as a filter*/
+
+#filter_menu .container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#filter_menu {
+    z-index: 9999;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    opacity: 0.8;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#filter_menu:hover{
+    opacity: 1.0;
+}
+
+#filter_menu h3 {
+    margin-top: 0px;
+}
+
+#filter_menu .menu_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/*-----------------------------------------------------------
+hr()
+------------------------------------------------------------- */
+.break{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-color: #BDBDBD;
+}
+
+/*-----------------------------------------------------------
+Municipality
+------------------------------------------------------------- */
+.bootstrap-select>.dropdown-toggle{
+    white-space: normal;
+}
+
+/*----------------------------------------------------------------------*/
+/*Customise the OptionGroup widgets*/
+/*----------------------------------------------------------------------*/
+#type_enterprise input[type=checkbox]{
+    accent-color: var(--red)
+}
+
+#type_enterprise .shiny-options-group{
+    display: grid;
+}
+
+#type_enterprise .checkbox-inline {
+    margin-left: 10px;
+}
+
+/*----------------------------------------------------------------------*/
+/*Customise the CheckGroup widget*/
+/*----------------------------------------------------------------------*/
+#raking_star_input input[type=checkbox] {
+    accent-color: var(--red);
+    height: 15px;
+    width: 15px;
+}
+  
+#raking_star_input .checkbox{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

@@ -1,8 +1,0 @@
-"0",""
-"0","df <- data.frame("
-"0","  lat = start_lat,"
-"0","  long = start_long,"
-"0","  start_station = start_station"
-"0",")"
-"0",""
-"0","df"

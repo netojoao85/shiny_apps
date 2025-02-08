@@ -1,0 +1,30 @@
+.data_menu {
+    background-color: var(--blue);
+    margin-top: 30px;
+    padding: 15px 10px;
+    color:white;
+    display: flex;
+  }
+  
+.data_menu h3{
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+
+/* -----------------------------------------------------------------
+checkboxGroupInput
+-> It allow to choose which variables/columns we want in the table
+-------------------------------------------------------------------- */
+#select_data{
+    background-color: var(--lightgrey);
+    padding-bottom: 10px;
+}
+  
+#select_data .checkbox-inline {
+    margin-left: 10px;
+}
+  
+#select_data input[type=checkbox] {
+    accent-color: var(--blue);
+}

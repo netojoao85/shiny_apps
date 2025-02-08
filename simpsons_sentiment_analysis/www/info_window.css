@@ -1,0 +1,84 @@
+
+#info_window h4 {
+    margin-top: 0px;
+}
+
+#info_window .menu_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ----------------------------------------------------
+ Costumise tabpanel
+------------------------------------------------------- */
+.nav-tabs {
+    border-bottom: 1px solid var(--purple);
+    background-color: var(--purple);
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.0.5);
+    border: 0px;
+    margin: 0px;
+}
+
+.nav-tabs>li>a {
+    color: white; 
+    border-radius: 25px;
+    margin-top: 10px; 
+    margin-bottom: 10px;
+    border: 0px;
+}
+.nav-tabs>li>a:hover {
+    color: var(--yellow); 
+    background-color: var(--purple);
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus {
+    background-color: var(--yellow);
+    color: black;
+}
+
+
+/* ----------------------------------------------------
+ Costumise info button
+------------------------------------------------------- */
+button#info_btn {
+    background-color: var(--yellow); 
+    color: blue;
+    position: absolute; 
+    top:20px;
+    right:40px;
+    width: 100px; 
+    font-size: 20px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+button#info_btn:hover {
+    background-color: #E3C805; 
+    color: white;
+}
+
+
+
+
+/* ----------------------------------------------------
+ Adjust screen when becomes smaller
+------------------------------------------------------- */
+@media (max-width: 1100px) {
+    button#info_btn {
+        position:relative;
+        top: 0px;
+        margin-bottom: 0px;
+        right: 0px;
+        width: 100%; 
+        font-size: 18px;
+        height: fit-content;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+  }
+
+ 
+  @media (max-width: 1100px) {
+    .head_image img {
+      margin-bottom: 0px;
+      border-radius: 0px;
+    }
+  }

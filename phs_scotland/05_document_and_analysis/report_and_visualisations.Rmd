@@ -1,0 +1,27 @@
+---
+title:  <span style="color:purple; margin-left:200px"> Activity & Covid Admissions </span>
+output:
+  html_document:
+    toc: true
+    toc_float: 
+      collapsed: false
+      smooth_scroll: true
+    css: styles.css
+    
+---
+
+<div style="float:left;position:absolute;top:0 ">
+
+
+
+      
+</div>
+
+```{r warning=FALSE,include=FALSE,echo=FALSE}
+source(file = here::here("02_clean_scripts/libraries/libraries.R"))
+```
+
+```{r}
+source(file = "../04_visualisations/avg_stay_length_by_deprivation.R", local = TRUE)$value
+```
+

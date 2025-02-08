@@ -1,0 +1,75 @@
+.model-dialog{
+    top: 50%;
+    transform: translateY(-50%); /*vertically center an element within its parent container.*/
+}
+
+
+
+.modal-header {
+    padding: 0px;
+    border: 0px;
+    /*background: radial-gradient(circle at top left, #010507, #36566D);
+    color:white;*/
+}
+
+.modal-body{
+    padding-top: 0px;
+    background-color: white; 
+}
+
+.modal-footer {
+    border-top: 0px solid var(--head-color);
+    background-color: #dddcdc;
+}
+
+
+
+  
+/* MODAL CLOSE BUTTON*/
+  .modal-footer .btn-default {
+    color: #ffffff; 
+    font-size: 14px; 
+    font-weight: bold; 
+    background-color: var(--red); 
+    border: 0px; 
+    border-radius: 5px; 
+    padding: 8px 15px; 
+  }
+  
+  /* On hover close btn */
+  .modal-footer .btn-default:hover {
+    background-color: #8C302E; 
+    color: whitesmoke; 
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  
+
+/* MODAL CONTENT TEXT */
+.popoup_window {
+    text-align: left;
+    font-size: 16px;
+    color:black;
+    padding: 10px 20px;
+    display: block;
+    word-wrap: break-word;
+ }
+
+
+ /* MODAL CONTENT TABLE */
+.modal-body table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.modal-body th, .modal-body td {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 0px;
+}
+
+/*table header*/
+.modal-body th {
+    background-color: #EFEFEF;
+    text-align: left;
+}
+

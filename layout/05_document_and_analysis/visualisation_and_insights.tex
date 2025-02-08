@@ -1,0 +1,437 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Visualisations \& Insights},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Visualisations \& Insights}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+Do people have longer lengths of stay from elective or emergency
+admissions?
+
+Are there any demographic groups that are driving the activity?
+
+How significant is deprivation as a driver of hospital activity?
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{source}\NormalTok{(}\AttributeTok{file =} \StringTok{"../02\_clean\_scripts/libraries/libraries.R"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'tidyverse' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'ggplot2' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'tibble' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'tidyr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'readr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'purrr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'dplyr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'stringr' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'forcats' was built under R version 4.2.2
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'lubridate' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{verbatim}
+## -- Attaching core tidyverse packages ------------------------ tidyverse 2.0.0 --
+## v dplyr     1.1.0     v readr     2.1.4
+## v forcats   1.0.0     v stringr   1.5.0
+## v ggplot2   3.4.1     v tibble    3.2.1
+## v lubridate 1.9.3     v tidyr     1.3.0
+## v purrr     1.0.1     
+## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()
+## i Use the ]8;;http://conflicted.r-lib.org/conflicted package]8;; to force all conflicts to become errors
+## 
+## Attaching package: 'janitor'
+## 
+## 
+## The following objects are masked from 'package:stats':
+## 
+##     chisq.test, fisher.test
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: package 'tsibble' was built under R version 4.2.3
+\end{verbatim}
+
+\begin{verbatim}
+## 
+## Attaching package: 'tsibble'
+## 
+## The following object is masked from 'package:lubridate':
+## 
+##     interval
+## 
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, union
+\end{verbatim}
+
+\hypertarget{average-stay-length-by-gender-age-group}{%
+\subsection{Average Stay length by Gender \&
+Age-Group}\label{average-stay-length-by-gender-age-group}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_patient\_demographics }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}
+\NormalTok{  here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{"03\_clean\_data/activity\_patient\_demographics.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 129393 Columns: 22
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr (11): shb, hb, location, admission_type, sex, age, hb_name, shb_name, lo...
+## dbl (11): id, year, quarter, episodes, length_of_episode, average_length_of_...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_patient\_demographics }\SpecialCharTok{\%\textgreater{}\%}
+      \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(hb\_name)) }\SpecialCharTok{\%\textgreater{}\%} 
+      \CommentTok{\# filter(age \%in\% input$demo\_age,}
+      \CommentTok{\#        hb\_name \%in\% input$demo\_hb,}
+      \CommentTok{\#        admission\_type \%in\% input$demo\_admission\_type) \%\textgreater{}\% }
+  \CommentTok{\# demographic\_filter() \%\textgreater{}\% }
+      \FunctionTok{group\_by}\NormalTok{(sex, year, age) }\SpecialCharTok{\%\textgreater{}\%}
+      \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_stay =} \FunctionTok{mean}\NormalTok{(average\_length\_of\_stay, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+}
+      \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ age, }\AttributeTok{y =}\NormalTok{ avg\_stay, }\AttributeTok{fill =}\NormalTok{ sex) }\SpecialCharTok{+}
+      \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{) }\SpecialCharTok{+}
+      \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+      \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Average Stay Length by Gender and Age Group"}\NormalTok{,}
+           \AttributeTok{x =} \ConstantTok{NULL}\NormalTok{,}
+           \AttributeTok{y =} \StringTok{"Average Stay Length"}\NormalTok{, }
+           \AttributeTok{fill =} \StringTok{"Sex"}\NormalTok{) }\SpecialCharTok{+}
+      \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"right"}\NormalTok{,}
+            \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill =} \StringTok{\textquotesingle{}\#FFFFFF\textquotesingle{}}\NormalTok{, }
+                                            \AttributeTok{color =} \StringTok{\textquotesingle{}\#F8F8F8\textquotesingle{}}\NormalTok{)) }\SpecialCharTok{+}
+      \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values =} \FunctionTok{c}\NormalTok{(}\StringTok{"lightblue"}\NormalTok{, }
+                                   \StringTok{"purple"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'sex', 'year'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\includegraphics{visualisation_and_insights_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{average-stay-length-by-deprivation}{%
+\subsection{Average Stay length by
+Deprivation}\label{average-stay-length-by-deprivation}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{activity\_deprivation }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}
+\NormalTok{  here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{"03\_clean\_data/activity\_deprivation.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 40821 Columns: 21
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (9): shb, hb, location, admission_type, hb_name, shb_name, location_nam...
+## dbl (12): id, year, quarter, simd, episodes, length_of_episode, average_leng...
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{    activity\_deprivation }\SpecialCharTok{\%\textgreater{}\%}
+      \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(hb\_name),}
+             \SpecialCharTok{!}\FunctionTok{is.na}\NormalTok{(simd)) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{simd =} \FunctionTok{factor}\NormalTok{(simd, }\AttributeTok{levels =} \FunctionTok{c}\NormalTok{(}\DecValTok{1}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{3}\NormalTok{, }\DecValTok{4}\NormalTok{, }\DecValTok{5}\NormalTok{))) }\SpecialCharTok{\%\textgreater{}\%}
+      \CommentTok{\# filter(hb\_name \%in\% input$demo\_hb,}
+      \CommentTok{\#        admission\_type \%in\% input$demo\_admission\_type) \%\textgreater{}\% }
+      \FunctionTok{group\_by}\NormalTok{(year, simd) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{summarise}\NormalTok{(}\AttributeTok{avg\_length\_stays =} \FunctionTok{mean}\NormalTok{(average\_length\_of\_stay, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)) }\SpecialCharTok{\%\textgreater{}\%}
+  \CommentTok{\# demographic\_simd\_filter() \%\textgreater{}\%}
+      \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+} 
+      \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year, }\AttributeTok{y =}\NormalTok{ avg\_length\_stays, }\AttributeTok{fill =}\NormalTok{ simd) }\SpecialCharTok{+}
+      \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{) }\SpecialCharTok{+} 
+      \FunctionTok{labs}\NormalTok{(}\AttributeTok{title =} \StringTok{"Average Length of Stay by Board of Treatment and Deprivation"}\NormalTok{,}
+           \AttributeTok{subtitle =} \StringTok{"1 {-} Most deprived | 5 {-} least deprived"}\NormalTok{,}
+           \AttributeTok{x =} \ConstantTok{NULL}\NormalTok{) }\SpecialCharTok{+}
+      \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+      \FunctionTok{scale\_x\_continuous}\NormalTok{(}\AttributeTok{breaks =} \FunctionTok{seq}\NormalTok{(}\DecValTok{2016}\NormalTok{, }\DecValTok{2021}\NormalTok{, }\DecValTok{1}\NormalTok{)) }\SpecialCharTok{+}
+      \FunctionTok{theme}\NormalTok{(}
+        \AttributeTok{legend.position =} \StringTok{"bottom"}\NormalTok{,}
+        \AttributeTok{panel.grid.minor.x =} \FunctionTok{element\_blank}\NormalTok{(),}
+        \AttributeTok{panel.grid.minor.y =} \FunctionTok{element\_blank}\NormalTok{(),}
+        \AttributeTok{legend.direction =} \StringTok{"horizontal"}\NormalTok{,}
+        \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill =} \StringTok{\textquotesingle{}\#FFFFFF\textquotesingle{}}\NormalTok{, }
+                                        \AttributeTok{color =} \StringTok{\textquotesingle{}\#F8F8F8\textquotesingle{}}\NormalTok{)) }\SpecialCharTok{+}
+      \FunctionTok{scale\_fill\_brewer}\NormalTok{(}\AttributeTok{palette =} \StringTok{"OrRd"}\NormalTok{, }\AttributeTok{direction =} \SpecialCharTok{{-}}\DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+      \CommentTok{\# scale\_fill\_manual(values = c("\#003087", "\#005EB8", }
+      \CommentTok{\#                              "\#99C7EB", "\#919EA8", }
+      \CommentTok{\#                              "\#DDE1E4")) +}
+      \FunctionTok{labs}\NormalTok{(}\AttributeTok{y =} \StringTok{"Average Stay Length"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## `summarise()` has grouped output by 'year'. You can override using the
+## `.groups` argument.
+\end{verbatim}
+
+\includegraphics{visualisation_and_insights_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\hypertarget{covid-19-admissions}{%
+\section{COVID 19 ADMISSIONS}\label{covid-19-admissions}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{covid\_admission\_age\_sex }\OtherTok{\textless{}{-}} \FunctionTok{read\_csv}\NormalTok{(}
+\NormalTok{  here}\SpecialCharTok{::}\FunctionTok{here}\NormalTok{(}\StringTok{"03\_clean\_data/covid\_admission\_age\_sex.csv"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Rows: 43516 Columns: 15
+## -- Column specification --------------------------------------------------------
+## Delimiter: ","
+## chr  (6): year_quarter, hb, hb_name, age_group, sex, admission_type
+## dbl  (8): year, month, day, quarter, week, number_admissions, average2018201...
+## date (1): date
+## 
+## i Use `spec()` to retrieve the full column specification for this data.
+## i Specify the column types or set `show_col_types = FALSE` to quiet this message.
+\end{verbatim}
+
+\hypertarget{covid-admissions-by-gender}{%
+\subsection{Covid admissions by
+Gender}\label{covid-admissions-by-gender}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{  covid\_admission\_age\_sex }\SpecialCharTok{\%\textgreater{}\%} 
+  \FunctionTok{mutate}\NormalTok{(}\AttributeTok{year\_quarter =} \FunctionTok{make\_yearquarter}\NormalTok{(year, quarter), }\AttributeTok{.after =}\NormalTok{ quarter) }\SpecialCharTok{\%\textgreater{}\%} 
+    \CommentTok{\# covid\_admission\_age\_sex \%\textgreater{}\%}
+      \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\NormalTok{sex }\SpecialCharTok{==} \StringTok{"All"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+             \CommentTok{\# admission\_type == input$demo\_admission\_type\_covid,}
+             \CommentTok{\# hb\_name        == input$demo\_hb\_covid) \%\textgreater{}\% }
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{year\_month =} \FunctionTok{yearmonth}\NormalTok{(date)) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{group\_by}\NormalTok{(year\_month, }
+\NormalTok{               sex) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{summarise}\NormalTok{(}\AttributeTok{nr\_admissions =} \FunctionTok{sum}\NormalTok{(number\_admissions), }\AttributeTok{.groups =} \StringTok{"keep"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+} 
+      \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ year\_month,}
+          \AttributeTok{y =}\NormalTok{ nr\_admissions, }
+          \AttributeTok{fill =}\NormalTok{ sex, }
+          \AttributeTok{color =}\NormalTok{ sex) }\SpecialCharTok{+}
+      \FunctionTok{geom\_line}\NormalTok{(}\AttributeTok{position =} \FunctionTok{position\_dodge}\NormalTok{(}\AttributeTok{width =} \FloatTok{0.5}\NormalTok{), }\AttributeTok{size =} \DecValTok{1}\NormalTok{) }\SpecialCharTok{+}
+      \FunctionTok{scale\_x\_yearmonth}\NormalTok{(}\AttributeTok{date\_labels =} \StringTok{"\%b }\SpecialCharTok{\textbackslash{}n}\StringTok{\%Y"}\NormalTok{, }\AttributeTok{date\_breaks =} \StringTok{"2 month"}\NormalTok{) }\SpecialCharTok{+}
+      \FunctionTok{labs}\NormalTok{(}
+        \AttributeTok{title    =} \StringTok{"Covid Admissions by Gender"}\NormalTok{,}
+           \AttributeTok{subtitle =} \StringTok{"January 2020 to February 2022}\SpecialCharTok{\textbackslash{}n}\StringTok{"}\NormalTok{,}
+           \AttributeTok{x        =} \ConstantTok{NULL}\NormalTok{, }
+           \AttributeTok{y        =} \StringTok{"Admissions"}
+\NormalTok{      ) }\SpecialCharTok{+}
+      \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+      \FunctionTok{theme}\NormalTok{(}\AttributeTok{legend.position =} \StringTok{"bottom"}\NormalTok{,}
+            \AttributeTok{legend.title =} \FunctionTok{element\_blank}\NormalTok{(),}
+            \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill =} \StringTok{\textquotesingle{}\#FFFFFF\textquotesingle{}}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}\#F8F8F8\textquotesingle{}}\NormalTok{),}
+            \AttributeTok{panel.grid.minor.y =} \FunctionTok{element\_blank}\NormalTok{()) }\SpecialCharTok{+}
+      \FunctionTok{scale\_color\_manual}\NormalTok{(}\AttributeTok{values =} \FunctionTok{c}\NormalTok{(}\StringTok{"Male"}   \OtherTok{=} \StringTok{"lightblue"}\NormalTok{,}
+                                    \StringTok{"Female"} \OtherTok{=} \StringTok{"purple"}\NormalTok{))}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## i Please use `linewidth` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+\end{verbatim}
+
+\includegraphics{visualisation_and_insights_files/figure-latex/unnamed-chunk-5-1.pdf}
+
+\hypertarget{covid-admissions-by-age-group}{%
+\subsection{Covid admissions by
+Age-Group}\label{covid-admissions-by-age-group}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{    covid\_admission\_age\_sex }\SpecialCharTok{\%\textgreater{}\%}
+      \CommentTok{\# filter(admission\_type == input$demo\_admission\_type\_covid\_age,}
+      \CommentTok{\#        hb\_name        == input$demo\_hb\_covid\_age) \%\textgreater{}\% }
+      \FunctionTok{mutate}\NormalTok{(}\AttributeTok{ym =} \FunctionTok{yearquarter}\NormalTok{(date),}
+             \AttributeTok{age\_group =}  \FunctionTok{case\_when}\NormalTok{(}
+\NormalTok{               age\_group }\SpecialCharTok{==} \StringTok{"Under 5"} \SpecialCharTok{\textasciitilde{}}  \StringTok{"0 {-} 04"}\NormalTok{,}
+\NormalTok{               age\_group }\SpecialCharTok{==} \StringTok{"5 {-} 14"} \SpecialCharTok{\textasciitilde{}}  \StringTok{"05 {-} 14"}\NormalTok{,}
+               \ConstantTok{TRUE} \SpecialCharTok{\textasciitilde{}}\NormalTok{ age\_group)) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{filter}\NormalTok{(}\SpecialCharTok{!}\NormalTok{age\_group }\SpecialCharTok{==} \StringTok{"All ages"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{group\_by}\NormalTok{(age\_group, ym, number\_admissions) }\SpecialCharTok{\%\textgreater{}\%} 
+      \FunctionTok{summarise}\NormalTok{(}\AttributeTok{nr\_admissions =} \FunctionTok{sum}\NormalTok{(number\_admissions), }\AttributeTok{.groups =} \StringTok{"keep"}\NormalTok{) }\SpecialCharTok{\%\textgreater{}\%} 
+    \CommentTok{\# covid\_age\_filter() \%\textgreater{}\% }
+    \FunctionTok{ggplot}\NormalTok{() }\SpecialCharTok{+}
+    \FunctionTok{aes}\NormalTok{(}\AttributeTok{x =}\NormalTok{ ym, }\AttributeTok{y =}\NormalTok{ nr\_admissions, }\AttributeTok{fill =}\NormalTok{ age\_group) }\SpecialCharTok{+} 
+    \FunctionTok{geom\_col}\NormalTok{(}\AttributeTok{position =} \StringTok{"dodge"}\NormalTok{) }\SpecialCharTok{+} 
+    \FunctionTok{theme\_minimal}\NormalTok{() }\SpecialCharTok{+}
+    \FunctionTok{labs}\NormalTok{(}
+      \AttributeTok{title    =} \StringTok{"Covid admissions by group age"}\NormalTok{,}
+      \AttributeTok{subtitle =} \StringTok{"January of 2020 to January 2022"}\NormalTok{,}
+      \AttributeTok{x =} \ConstantTok{NULL}\NormalTok{,}
+      \AttributeTok{y =} \StringTok{"Adimissions"}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{scale\_fill\_manual}\NormalTok{(}\AttributeTok{values =} \FunctionTok{c}\NormalTok{(}\StringTok{"\#003087"}\NormalTok{, }\StringTok{"\#005EB8"}\NormalTok{, }
+                                 \StringTok{"\#4D7CB9"}\NormalTok{, }\StringTok{"\#99C7EB"}\NormalTok{, }
+                                 \StringTok{"\#919EA8"}\NormalTok{, }\StringTok{"\#B7C0C6"}\NormalTok{, }
+                                 \StringTok{"\#DDE1E4"}\NormalTok{)) }\SpecialCharTok{+}
+    \FunctionTok{scale\_x\_yearquarter}\NormalTok{(}\AttributeTok{date\_labels =} \StringTok{"\%Y }\SpecialCharTok{\textbackslash{}n}\StringTok{ Q\%q"}\NormalTok{, }\AttributeTok{date\_breaks =} \StringTok{"3 months"}\NormalTok{) }\SpecialCharTok{+}
+    \FunctionTok{theme}\NormalTok{(}
+      \AttributeTok{legend.position =} \StringTok{"bottom"}\NormalTok{,}
+      \AttributeTok{legend.title =} \FunctionTok{element\_blank}\NormalTok{(),}
+      \AttributeTok{panel.grid.major.x =} \FunctionTok{element\_blank}\NormalTok{(),}
+      \AttributeTok{panel.background =} \FunctionTok{element\_rect}\NormalTok{(}\AttributeTok{fill =} \StringTok{\textquotesingle{}\#FFFFFF\textquotesingle{}}\NormalTok{, }\AttributeTok{color =} \StringTok{\textquotesingle{}\#F8F8F8\textquotesingle{}}\NormalTok{)}
+\NormalTok{    )}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{visualisation_and_insights_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+\end{document}

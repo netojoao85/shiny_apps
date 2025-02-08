@@ -1,0 +1,97 @@
+/* ---- WIDGET: Customise Radio Button -----*/
+button.btn.radiobtn.btn-custom-class{
+    background: #D9D9D9;
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
+  
+  button.btn.radiobtn.btn-custom-class.active {
+    background-color: #85D8C4;
+    font-weight: bold;
+    box-shadow: none;
+  }
+
+
+
+
+  /*-----------------------------------------------*/
+.content_section_analysis{
+    flex-wrap: wrap;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0px 30px 0px;
+    padding: 10px 15px;
+    background: white;
+    border-radius: 15px;
+    width: 82%;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0 , 0.3);
+}
+
+.content_section_analysis h4{
+  font-weight: bold; 
+  color: black;
+  margin-bottom: 0px;
+  padding-right: 0px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+#pace i{
+  font-size: 28px;
+  color: black;
+  padding-right: 10px;
+}
+
+.content_section_analysis hr{
+  margin: 10px 0px 10px 0px;
+  border: 0.3px dashed #979797;
+}
+
+.content_section_analysis p{
+  color:#979797;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#pace .irs--shiny .irs-bar {
+    border-top: 1px solid #78CABB;
+    border-bottom: 1px solid #78CABB;
+    background: #78CABB;
+}
+
+#pace .irs--shiny .irs-single {
+    background-color: #78CABB;
+    font-size:16px;
+    margin-top: -4px;
+}
+
+
+
+.analysis_velocity .irs--shiny .irs-bar {
+  border-top: 1px solid var(--option2);
+  border-bottom: 1px solid var(--option2);
+  background: var(--option2);
+}
+
+.analysis_velocity .irs--shiny .irs-single {
+  background-color: var(--option2);
+  font-size:16px;
+  margin-top: -4px;
+}
+
+.analysis_performace .irs--shiny .irs-bar {
+  border-top: 1px solid var(--option3);
+  border-bottom: 1px solid var(--option3);
+  background: var(--option3);
+}
+
+.analysis_performace .irs--shiny .irs-single {
+  background-color: var(--option3);
+  font-size:16px;
+  margin-top: -4px;
+}

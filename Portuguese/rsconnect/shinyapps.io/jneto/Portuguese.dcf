@@ -1,0 +1,13 @@
+name: Portuguese
+title: Portuguese
+username: jneto
+account: jneto
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 12051866
+bundleId:
+url: https://jneto.shinyapps.io/Portuguese/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: head/app.R

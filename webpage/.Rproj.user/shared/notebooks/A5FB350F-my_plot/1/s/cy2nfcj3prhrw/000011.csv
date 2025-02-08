@@ -1,8 +1,0 @@
-"0",""
-"0",""
-"0",""
-"0","sco_nhs_hb <- read_sf(""../Downloads/SG_NHS_HealthBoards_2019/SG_NHS_HealthBoards_2019.shp"") %>% "
-"0","  st_simplify(dTolerance = 2500) %>%"
-"0","  st_transform(., 4326)"
-"2","Error: Cannot open ""../Downloads/SG_NHS_HealthBoards_2019/SG_NHS_HealthBoards_2019.shp""; The file doesn't seem to exist.
-"
