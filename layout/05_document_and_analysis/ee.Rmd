@@ -1,9 +1,0 @@
----
-title: "R Notebook"
-output: html_notebook
----
-
-```{=html}
-<img scr="05_document_and_analysis/images/phs_logo.png") >
-```
-
