@@ -38,11 +38,35 @@ ui <- fluidPage(
   
   fluidRow(
       class = "option",
-           style = "background-color: #67ADF5; height:25px; margin-bottom:0px",
+           style = "background-color: #67ADF5; height:85px; margin-bottom:0px",
            column(
              class ="options",
              width = 4,
 
+             selectInput(
+               inputId = "in_character",
+               label = NULL,
+               choices = character_filter,
+               selected = "All",
+               width = "100%"),
+             selectInput(
+               inputId = "in_character",
+               label = NULL,
+               choices = character_filter,
+               selected = "All",
+               width = "100%"),
+             selectInput(
+               inputId = "in_character",
+               label = NULL,
+               choices = character_filter,
+               selected = "All",
+               width = "100%"),
+             selectInput(
+               inputId = "in_character",
+               label = NULL,
+               choices = character_filter,
+               selected = "All",
+               width = "100%"),
              selectInput(
                inputId = "in_character",
                label = NULL,
@@ -62,6 +86,10 @@ ui <- fluidPage(
       
       fluidRow(
         style = "border-radius:10px 10px 0px 0px;",
+        
+        tags$image(src = "cloud.png", height = "130px"),
+        tags$image(src = "cloud.png", height = "130px"),
+        tags$image(src = "cloud.png", height = "130px"),
       
       ## Plot sections -------------------------------------------------------
       
@@ -80,7 +108,13 @@ ui <- fluidPage(
                    class = "section",
                    width = 6,
                    
-                   h3("Sentiment", icon(id = "info_sentiment", "info-circle")), 
+                   div(class = "section_header",
+                     tags$image(src = "donuts.png", height = "55px", width = "55px"),
+                     h3("Sentiment", icon(id = "info_sentiment", "info-circle")), 
+                     ),
+                   
+                   # tags$image(src = "donuts.png", height = "55px", width = "55px"),
+                   # h3("Sentiment", icon(id = "info_sentiment", "info-circle")), 
                    bsTooltip(
                      id = "info_sentiment",
                      title = "The number of words spoken by emotion!",
@@ -98,7 +132,12 @@ ui <- fluidPage(
                    
                    fluidRow(
                      column(width = 5,
-                            h3("Location", icon(id = "info_location", "info-circle")),
+                            
+                            div(class = "section_header",
+                                tags$image(src = "donuts.png", height = "55px", width = "55px"),
+                                h3("Location", icon(id = "info_location", "info-circle")),
+                            ),
+                            
                             bsTooltip(
                               id = "info_location",
                               title = "The ratio between positive and negative feelings in the top 50 locations. You can sort by the most negative or positive.",
@@ -133,7 +172,11 @@ ui <- fluidPage(
                    class = "section",
                    width = 12,
                    
-                   h3("Season", icon(id = "info_season", "info-circle")),
+                   div(class = "section_header",
+                       tags$image(src = "donuts.png", height = "55px", width = "55px"),
+                       h3("Season", icon(id = "info_season", "info-circle")),
+                   ),
+
                    bsTooltip(
                      id = "info_season",
                      title = "The number of positive and negative feeling words per season.",
@@ -151,7 +194,16 @@ ui <- fluidPage(
           class = "word_cloud",
           width = 4,
           fluidRow(
-            column(width = 8, h3("Common Words")),
+            column(width = 8, 
+                   
+                   div(class = "section_header",
+                       tags$image(src = "donuts.png", height = "55px", width = "55px"),
+                       h3("Common Words")),
+                   ),
+                   
+                   
+                   
+                   # h3("Common Words")),
             column(width = 4,
                 selectInput(
                    inputId = "in_wc_sentiment",

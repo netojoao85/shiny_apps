@@ -2,7 +2,7 @@ library(RColorBrewer)
 
 output$sentiment <- renderPlotly({
   
-  blues_palette <- brewer.pal(10, "Greens")
+  blues_palette <- brewer.pal(10, "Purples")
   
   sentiment <- filtered_data() %>% 
     count(sentiment_nrc, sort = TRUE) %>% 

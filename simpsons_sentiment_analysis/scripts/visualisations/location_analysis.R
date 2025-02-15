@@ -27,8 +27,8 @@ output$location_analysis <- renderPlotly({
   
   
   plot_ly(top_location, y = ~location) %>%
-    add_trace(x = ~round(negative / total, 3), name = "negative", type = "bar", orientation = "h", marker = list(color = '#F2767B')) %>% #'#E8CA00'
-    add_trace(x = ~round(positive / total, 3), name = "positive", type = "bar", orientation = "h", marker = list(color = '#72CBD0')) %>% 
+    add_trace(x = ~round(negative / total, 3), name = "negative", type = "bar", orientation = "h", marker = list(color = '#C6C7E1')) %>% #'#E8CA00'
+    add_trace(x = ~round(positive / total, 3), name = "positive", type = "bar", orientation = "h", marker = list(color = '#3F007D')) %>% 
     config(displayModeBar = FALSE) %>%
     layout(
       showlegend = FALSE,

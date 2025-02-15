@@ -1,6 +1,6 @@
 
 :root {
-  --body_color: #F3F1F1;
+  --body_color: #69AFF7;
   --section:white;
   --lightblue:#73B7F4;
   --blue: #1D6AAF;
@@ -9,6 +9,7 @@
   --lightpurple: #7070A8;
   --red: firebrick;
   --page: #e0e0e0;
+  --pink: #ED5AA0;
 }
 
 
@@ -21,7 +22,7 @@
 }
 
 .head_image img{
-  margin: 0px 0px 0px 0px;
+  margin: 0px 0px 35px 0px;
   width: 100%; 
   height: auto; 
 }
@@ -56,8 +57,8 @@ body{
  information each section has
 ------------------------------------------------------- */
 #info_sentiment, #info_location, #info_season, #info_wc{
-  color: black; 
-  font-size: 14px; 
+  color: var(--pink); 
+  font-size: 16px; 
   vertical-align: middle;
 }
 
@@ -74,8 +75,8 @@ body{
 }
 
 .main_panel h3{
-  color: black;
-  margin-top: 10px;
+  color: var(--pink);
+  margin-top: 0px;
   margin-bottom: 0px;
 }
 
@@ -84,12 +85,16 @@ body{
  SECTIONS
 ------------------------------------------------------- */
 .section, .section_location, .word_cloud {
-  /*border: 1px solid #CBC8C8;*/
-  border: 1px solid var(--lightblue);
+  border: 3px solid var(--yellow);
   border-radius: 10px;
   box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 20px;
-  background-color: var(--section)
+  background-color: var(--section); 
+}
+
+.section_header {
+  display: flex;
+  align-items: center;
 }
 
 .section, .section_location{
@@ -150,14 +155,15 @@ label#in_loc_sort-label {
 .row.option .selectize-input.items.full.has-options.has-items {
   border: 5px solid var(--yellow);
   box-shadow: 1px 2px 3px rgba(0,0,0, 0.5);
-  border-radius: 10px;
+  border-radius: 15px;
   margin-left: 0px;
   margin-bottom: 0px;
+  height: 90px;
 } 
 
 label#in_character-label {
   display: contents;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-right: 0px;
   vertical-align: middle;
   color: black

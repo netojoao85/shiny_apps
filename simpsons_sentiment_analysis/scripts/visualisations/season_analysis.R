@@ -34,13 +34,13 @@ output$season_analysis <- renderPlotly({
           mode = "lines", 
           fill = "tozeroy", 
           name = "Positive",
-          fillcolor = "rgba(114, 203, 208, 1.0)",
-          line = list(color = "#21A3A4", width = 2, dash = 'solid')) %>%    # dash = "dash", "dot", "solid"
+          fillcolor = "rgba(198,199, 255, 1.0)",
+          line = list(color = "#C6C7E1", width = 2, dash = 'solid')) %>%    # dash = "dash", "dot", "solid"
     add_trace(x = ~season_neg$season, y = ~season_neg$count_neg,
               name = "Negative",
               opacity = 0.2,
-              line = list(color = "#FF0000", width = 2, dash = 'solid'),
-              fillcolor = "rgba(242, 118, 123, 0.1)")
+              line = list(color = "#3F007D", width = 2, dash = 'solid'),
+              fillcolor = "rgba(63, 0, 125, 0.1)")
               # fillcolor = "rgba(232, 202, 0, 0.1)")
 
   season_plot %>% 
